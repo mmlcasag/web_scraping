@@ -72,3 +72,22 @@ print("")
 header = div.find("h1")
 print(header)
 print("")
+
+# We can search specific strings in our find/find_all calls
+# Let's say we want to search for the word "Some bold text" inside our paragraphs
+string_search = soup.find_all("p", string="Some bold text")
+print(string_search)
+print("")
+
+# If you want to search for just a part of the string (like a LIKE '%%' clause)
+# You can use regex, for example:
+import re
+
+string_search = soup.find_all("p", string=re.compile("Some"))
+print(string_search)
+print("")
+
+# if you want to ignore case you can use regex like this
+string_search = soup.find_all("h2", string=re.compile("(H|h)eader"))
+print(string_search)
+print("")
