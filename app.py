@@ -15,6 +15,12 @@ print(soup)
 # Print out our HTML formatted in a more readable way
 print(soup.prettify())
 
+
+
+
+
+
+
 # Start using BeautifulSoup to scrape
 first_header = soup.find("h2")
 print('find("h2") example:')
@@ -99,6 +105,12 @@ string_search = soup.find_all("h2", string=re.compile("(H|h)eader"))
 print(string_search)
 print("")
 
+
+
+
+
+
+
 # the SELECT() method (CSS selector)
 print('select("p") example:')
 paragraph = soup.select("p")
@@ -146,4 +158,42 @@ print("")
 print('select("[align=middle]") example:')
 elements = soup.select("[align=middle]")
 print(elements)
+print("")
+
+
+
+
+
+
+
+# Getting different properties of the HTML
+# Let's consider this example:
+print("Considering this example:")
+print('find_all("h2") example:')
+headers = soup.find_all("h2")
+print(headers)
+print("")
+
+# How do we grab the string/text from inside an HTML tag?
+print("How do we grab the string/text from inside an HTML tag?")
+print(".string attribute")
+for header in headers:
+    print(header.string)
+print("")
+
+# You can only do that if it is the lowermost element
+# Otherwise it will return None
+print("Example of a None return")
+div = soup.find("div")
+print(div.prettify())
+print(div.string)
+print("")
+# It returns None because Beautiful Soup does not know which string to print
+
+# If you really want to get all the possible string values inside an element with lots of HTML in it
+# You can use the GET_TEXT() method
+print("Example of GET_TEXT() method")
+div = soup.find("div")
+print(div.prettify())
+print(div.get_text())
 print("")
