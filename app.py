@@ -218,3 +218,23 @@ paragraphs = soup.select("p#paragraph-id")
 print(paragraphs)
 print('paragraphs[0]["id"] example')
 print(paragraphs[0]["id"])
+print("")
+
+
+
+
+
+
+
+print("Path Syntax")
+print("From an HTML like this:")
+print(soup)
+print("You can get the H1 value:")
+print(soup.body.div.h1.string)
+print("By navigating through the fields like this:")
+print("soup.body.div.h1.string")
+print("")
+
+# Know the terms: Parent, Sibling, Child
+print("Siblings example")
+print(soup.body.find("div").find_next_siblings())
