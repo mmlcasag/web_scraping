@@ -1,4 +1,4 @@
-## Code along from this video tutorial:
+## Code along for this video tutorial:
 https://www.youtube.com/watch?v=GjKQ6V_ViQE
 
 ## During this tutorial we are going to be scraping this web page:
