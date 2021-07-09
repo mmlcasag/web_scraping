@@ -197,3 +197,24 @@ div = soup.find("div")
 print(div.prettify())
 print(div.get_text())
 print("")
+
+
+
+
+
+
+
+# Getting a specific property of an HTML elements
+link = soup.find("a")
+# How do we get the href property?
+print("Getting a specific property of an HTML elements")
+print('link["href"] example')
+print(link["href"])
+print("")
+
+# Another way of doing it with select()
+print("Another way of doing it with select()")
+paragraphs = soup.select("p#paragraph-id")
+print(paragraphs)
+print('paragraphs[0]["id"] example')
+print(paragraphs[0]["id"])
