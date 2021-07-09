@@ -5,9 +5,13 @@ https://www.youtube.com/watch?v=GjKQ6V_ViQE
 https://keithgalli.github.io/web-scraping/example.html
 
 ## Pre-requisites:
-* cd C:
-* mkdir web_scraping
-* cd web_scraping
-* mkdir .venv
-* pipenv install
+* python 3.8
+* pip
+* pipenv
+
+## How to set up this project:
+* Run `git clone https://github.com/mmlcasag/web_scraping.git`
+* Navigate into the project folder via terminal
+* Run `pipenv install`
+* Run `pipenv shell`
 
